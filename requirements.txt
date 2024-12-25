@@ -16,5 +16,5 @@ pyaudio
 PyWavelets
 soundfile
 noisereduce
-
-
+Flask
+flask-cors
