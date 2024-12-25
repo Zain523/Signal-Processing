@@ -18,17 +18,20 @@ def reduce_noise(file_path, technique):
 
     elif(technique == 'spectral'):
         filter_audio = denoise_audio(audio, sr)
+
     else:
       filter_audio = wavelet_denoising(audio)
 
     print("Audio files denoised successfully!")
 
-    sf.write('filter_audio.wav', filter_audio , samplerate=sr)
+    # We save file directly to client assets folder until we use cloud storage because from there we easily access that file 
+    
+    sf.write('D:/Python/Signal Processing/client/public/assets/filter_audio.wav', filter_audio , samplerate=sr)
 
     print("Audio files save successfully!")
     
-    filter_audio_path = os.path.abspath('filter_audio.wav')
-    return filter_audio_path
+    # filter_audio_path = os.path.abspath('filter_audio.wav')
+    return 'filter_audio.wav'
 
 
 # def calculate_mse(clean_signal, noised_signal):
