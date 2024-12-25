@@ -67,3 +67,4 @@ def calculate_mse(clean_signal, noised_signal):
 
 mse_wavelet = calculate_mse(audio_wavelet, audio)
 print(f"MSE (Wavelet): {mse_wavelet}")
+
